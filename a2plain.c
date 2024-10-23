@@ -238,7 +238,7 @@ static void map_row_major(A2 uarray2,
 {
         assert(uarray2 != NULL);
         assert(apply != NULL);
-        assert(cl != NULL);
+        // assert(cl != NULL);
         UArray2_map_row_major(uarray2, (UArray2_applyfun*)apply, cl);
 }
 

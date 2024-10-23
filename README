@@ -1,0 +1,62 @@
+   /*****************************************************************
+    *                                                               *
+    *                          README                               *
+    *                                                               *
+    *                          arith                                *
+    *                                                               *
+    *                          10/22/24                             *
+    *                                                               *
+    *****************************************************************/
+
+**Identifies you and your programming partner by name and CS login**
+    1. Peter Morganelli - pmorga01
+    2. Shepard Rodgers - srodge01
+
+
+**Acknowledges help you may have received or collaborative work you may have 
+undertaken with classmates, programming partners, course staff, or others**
+    Thank you so much to TAs Dani, Charlie, Rory, Siara, Michael, Tim,
+    Dan, and all the other TAs for their help in OH and always bringing the
+    best vibes.
+
+
+**Architecture of Soliutions**
+
+/****************************************************************
+*                                                               *
+*                  Solution Overview                            *
+*                                                               *
+*****************************************************************/
+
+Each file contains functions for both compressing and decompressing in 
+parrallel steps, which allows modules to share secrets about certain steps
+in the compression/decompression process.
+
+1. readOrWrite.c
+        a. This file is responsible for trimming the file and writing 
+           the contents to disk. On the decompression side, it reads the 
+           compressed file 
+2. transformPixels.c
+        a. This file provides functions to convert pixels from an RGB 
+           representation to component video representations and back. It also
+           exports the populateCv and populateRgb functions, the first of
+           which we use in the wordConversions module to reconstruct a cv array
+3. wordConversions.c
+        a. This file is responsible for converting 2x2 blocks to a 32-bit word
+           and 2x2 blocks to a 32-bit word.
+3. packOrUnpack.c
+        a. This file is responsible for packing 32-bit words and unpacking 
+           32-bit words using the bitpack interface. It is used by the 
+           wordConversions module and keeps the secret of what order the values
+           in the codeword are stored in.
+
+**Identifies what has been correctly implemented and what has not**
+    Things that are not working:
+        N/A
+    Things that are working:
+        Everything should be working!
+   
+Says approximately how many hours you have spent completing the assignment
+   Analyzing Problems: 7
+   Solving Problems: 33.5
+   Time spent total: 46 hours

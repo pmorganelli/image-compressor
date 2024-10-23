@@ -1,9 +1,20 @@
+/*
+ *      40image.c
+ *      by Peter Morganelli and Shepard Rodgers, 10/12/24
+ *      Starter code was provided
+ *      arith assignment
+ *
+ *      This file contains the implementation for the 40image abstraction.
+ *      It includes the main function that will process command-line arguments
+ *      and either compresses or decompresses the image
+ *      
+ */
+
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include "assert.h"
 #include "compress40.h"
-
 
 static void (*compress_or_decompress)(FILE *input) = compress40;
 
